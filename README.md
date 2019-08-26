@@ -76,9 +76,12 @@ def download_image(request):
 ```
 In the same directory include the `privatekey.json` with the [service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and the `requirements.txt` file. 
 
+
 Finally cd to that directory and deploy the cloud Function with the following command:
 
 `gcloud beta functions deploy <function Name> --runtime python37 --trigger-http`
+
+Note that the cloud function name (`<function Name>`) must match the name of the function we defined.
 
 ## Javascript
 
@@ -147,10 +150,10 @@ You can test it adding to your `package.json` file the next line
 ```
 Doing a  `npm install` and running the server with `npm start` and check `http://localhost:8080/`
 
-`gcloud beta functions deploy <function Name> --runtime nodejs10 --trigger-http`
+
 	
 To deploy it cd to that directory and deploy the cloud Function with the following command:
 
+`gcloud beta functions deploy <function Name> --runtime nodejs10 --trigger-http`
 
-
-Note that the cloud function name matches the name of the function we defined in code: `<function Name>`.
+Note that the cloud function name (`<function Name>`) must match the name of the function we defined.
