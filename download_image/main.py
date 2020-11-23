@@ -2,9 +2,10 @@ import ee
 import json
 with open("privatekey.json") as keyfile:
     extracted_key_data = keyfile.read()
-    credentials = ee.ServiceAccountCredentials(key_data=extracted_key_data)
+    service_account = 'gef-ldmp-server@gef-ld-toolbox.iam.gserviceaccount.com'
+    credentials = ee.ServiceAccountCredentials(service_account, key_data=extracted_key_data)
 ee.Initialize(credentials, use_cloud_api=True)
-#service_account = 'gef-ldmp-server@gef-ld-toolbox.iam.gserviceaccount.com'
+service_account = 'gef-ldmp-server@gef-ld-toolbox.iam.gserviceaccount.com'
 #credentials = ee.ServiceAccountCredentials(service_account, 'privatekey.json')
 #ee.Initialize(credentials)
 
