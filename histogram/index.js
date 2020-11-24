@@ -50,7 +50,7 @@ const calcHistogram = (assetId, geometry) => {
   return histogram;
 };
 
-exports.rasterInteraction = (req, res) => {
+exports.histogram = (req, res) => {
   const assetId = req.body.assetId;
   const geometry = req.body.geometry;
   

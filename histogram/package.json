@@ -12,7 +12,7 @@
     "node": ">=8"
   },
   "dependencies": {
-    "@google/earthengine": "^0.1.185"
+    "@google/earthengine": "^0.1.232"
   },
   "cloud-repo-tools": {
     "requiresKeyFile": true,
